@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>红绿灯小游戏</title>
+    <link rel="stylesheet" href="./assets/style/index.css" />
+  </head>
+  <body>
+    <div class="info-wrapper">
+      <div class="image"></div>
+      <div class="text-wrapper">
+        小朋友们，你们好，小佩奇今天周五放学了，不过由于佩奇爸爸有事没来接小佩奇，所以小佩奇需要自己过<strong>3</strong>个马路回家(往返左右运动)，但是小佩奇并不会交通规则，这样它可能会有危险；为了能让小佩奇安全回家，聪明的你是否可以帮助佩奇过马路呢?如果你能帮助小佩奇安全回家(安全通过每个马路)的话，你将受到小佩奇家人的感激以及能够<strong>成为小佩奇的小伙伴</strong>，和佩奇愉快地玩耍！快成为佩奇小伙伴吧！
+      </div>
+    </div>
+    <div class="traffic-wrapper">
+      <ul class="traffic">
+        <li class="timer">9</li>
+        <li class="red"></li>
+        <li class="yellow"></li>
+        <li class="green"></li>
+      </ul>
+    </div>
+    <div class="scene-wrapper">
+      <img src="./assets/images/zebra.jpg" class="left" />
+      <img src="./assets/images/zebra.jpg" class="right" />
+      <!-- <img src="./assets/images/peiqi2.jpg" class="role" /> -->
+      <div class="bg-wrapper"></div>
+    </div>
+    <div class="btn-wrapper">
+      <button class="start">开始游戏</button>
+      <button class="turnLeft">向左</button>
+      <button class="turnRight">向右</button>
+      <span class="surplus">剩余次数：3</span>
+      <span class="sum">得分：0</span>
+    </div>
+    <div class="mask-wrapper">
+      <ul class="rule">
+        <li class="head">规则/玩法</li>
+        <li>
+          1、点击游戏开始，每个交通灯开始交替闪烁并有相应的倒计时；玩家可以点击左右方向键或按键盘左右方向键控制佩奇左右走动。
+        </li>
+        <li>
+          2、小佩奇需要在红灯或黄灯亮时在安全区停下等待，在绿灯亮时安全通过马路，否则，玩家不得分或扣分，每个玩家有三次机会。
+        </li>
+        <li>3、游戏结束后，根据得分判断是否通过(满分才算真正通关)。</li>
+        <li class="btn-wrapper">
+          <a href="javascript:;" class="understand">明白</a>
+          <a href="javascript:;" class="close">关闭</a>
+        </li>
+      </ul>
+    </div>
+    <script src="./assets/js/game.js"></script>
+  </body>
+</html>
