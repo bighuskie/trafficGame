@@ -1,5 +1,5 @@
 /**
- * 2.1、游戏角色对象构造函数
+ * 2.1、游戏角色对象构造函数Character
  */
 (function(window) {
   function Character(imgSrc) {
@@ -49,7 +49,7 @@
 })(window);
 
 /**
- * 3.1、定义角色行动指令集
+ * 3.1、定义角色行动指令集instruction
  */
 var instruction = {
   "37": "goLeft",

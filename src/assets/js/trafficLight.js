@@ -1,9 +1,9 @@
 /**
- * 3.1、红绿灯对象构造函数
+ * 4.1、红绿灯对象构造函数TrafficLight
  */
 (function(window) {
   function TrafficLight() {
-    //3.2、红绿灯倒计时
+    //4.2、红绿灯倒计时
     this.runTimer = function(k) {
       var showTime = document.querySelector(".timer");
       showTime.innerHTML = k;
@@ -17,14 +17,14 @@
         clearInterval(timer);
       }
     };
-    //3.3、产生红绿灯状态函数
+    //4.3、产生红绿灯状态函数
     this.apromise = function(time, count) {
       return new Promise(resolve => {
         this.runTimer(count);
         setTimeout(resolve, time);
       });
     };
-    //3.4、红绿等显示切换
+    //4.4、红绿等显示切换
     this.showLight = function(color) {
       let colorEl = document.querySelector("." + color);
       let siblings = colorEl.parentNode.children;
@@ -35,7 +35,7 @@
     };
   }
 
-  //3.5初始化红绿灯
+  //4.5初始化红绿灯
   TrafficLight.prototype.init = function(gameRules, role) {
     this.apromise(9000, 9)
       .then(() => {
