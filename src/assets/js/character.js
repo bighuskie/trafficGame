@@ -1,12 +1,12 @@
 /**
- * 1.1、游戏角色对象构造函数
+ * 2.1、游戏角色对象构造函数
  */
 (function(window) {
   function Character(imgSrc) {
     this.$elem = document.createElement("img");
     this.imgSrc = imgSrc;
   }
-  //1.2、角色向左运动函数
+  //2.2、角色向左运动函数
   Character.prototype.goLeft = function(gameRules) {
     if (this.$elem.offsetLeft <= 80 || gameRules.isStart == false) {
       return;
@@ -22,7 +22,7 @@
     }
   };
 
-  //1.3、角色向右函数
+  //2.3、角色向右函数
   Character.prototype.goRight = function(gameRules) {
     if (this.$elem.offsetLeft >= 800 || gameRules.isStart == false) {
       return;
@@ -38,7 +38,7 @@
     }
   };
 
-  //1.4、初始化角色函数
+  //2.4、初始化角色函数
   Character.prototype.init = function(scene) {
     this.$elem.src = this.imgSrc;
     this.$elem.className = "role";
@@ -49,14 +49,14 @@
 })(window);
 
 /**
- * 2.1、定义角色行动指令集
+ * 3.1、定义角色行动指令集
  */
 var instruction = {
   "37": "goLeft",
   "39": "goRight"
 };
 
-// 2.2、生成角色行动指令函数
+// 3.2、生成角色行动指令函数
 var makeInstruct = function(receiver, instruct) {
   return receiver[instruct];
 };
